@@ -1,0 +1,55 @@
+Building the model
+
+1. Identify the misspelled word
+When identifying the misspelled word, you can check whether it is in
+the vocabulary. If you don't find it, then it is probably a typo.
+
+
+2. Find strings n edit distance away
+
+Edit : an operation performed on a string to change it.
+
+An edit is a type of operation performed on a string to change it into another string. 
+Edit distance counts the number of these operations so that the n edit distance tells you how many operations away one string is from another.
+
+There are 4 main edit options:
+
+1.INSERT
+2.DELETE
+3.SWITCH
+4.REPLACE
+
+
+
+3. Filter candidates
+In this step, you want to take all the words generated above and 
+then only keep the actual words that make sense and 
+that you can find in your vocabulary.
+
+
+4.calculate worth probabilities
+
+To calculate the probability of a word in the sentence you need to first calculate the word frequencies.
+In addition you want to count the total number of words in the body of text or corpus.
+The probability of any word within the corpus is the number of times the word appears divided by the total number of words.
+
+find the word candidate with the highest probability and choose that word as the replacements and that's it.
+
+
+
+--- ------  Minimum edit distance
+
+For calculating minimum at a distance you will use three types of edits operations.
+All three operations that you already know inserts delite and replace.
+
+edit cost :
+
+Insert - 1
+Replace - 2
+Delete - 1
+
+Note that as your strings get larger it gets much harder to calculate the minimum edit distance.
+Hence you will now learn about the minimum edit distance algorithm!
+This is called Dynamic Programming.
+
+

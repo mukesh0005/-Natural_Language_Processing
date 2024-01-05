@@ -5,3 +5,33 @@ Markov Chains
 Hidden Markov Models
 
 Viterbi algorithm
+
+
+Markov chains :
+
+Really important because they are used in speech recognition.
+They're a type of stochastic model that describes a sequence of possible events.
+A Markov chain, can be depicted as a directed graph
+
+Markov property states that the probability of the next event only 
+depends on the current event.
+
+Transistion matrix:
+All of the transition probabilities in each row should add up to one.
+the sentence has a 40% chance to start as a noun, 10% chance to start with a verb
+ and a 50% chance to start with another part of speech tag. 
+
+ Hidden Markov Models:
+
+ The name Hidden Markov model implies that states are hidden or not directly observable.
+
+
+Emission probabilities : These describe the transition
+from the hidden states of your Hidden Markov model, 
+which are parts of speech to the observables or the words of your corpus.
+
+
+Calculating Probabilities :
+
+To calculate the transition probabilities,
+ you actually only use the parts of speech tags from your training corpus.

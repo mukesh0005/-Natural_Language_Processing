@@ -16,10 +16,26 @@ A Markov chain, can be depicted as a directed graph
 Markov property states that the probability of the next event only 
 depends on the current event.
 
+Even after n iterations the probability of an event converges to a single probability and
+this probability is called equilibrium state or stationary state.
+
 Transistion matrix:
 All of the transition probabilities in each row should add up to one.
 the sentence has a 40% chance to start as a noun, 10% chance to start with a verb
  and a 50% chance to start with another part of speech tag. 
+
+The rows represent the current state and columns represent the next state.
+
+
+--- pie * Transistion_matirx =  Transistion_matirx ---- 
+
+ here pie matrix is eigen vector
+
+The transition probabilities remain constant from one transition to other transition.
+
+sum of columns of a transition matrix is one because the outgoing arrows from 
+one state to other is always adds upto one.
+
 
  Hidden Markov Models:
 
@@ -34,4 +50,45 @@ which are parts of speech to the observables or the words of your corpus.
 Calculating Probabilities :
 
 To calculate the transition probabilities,
- you actually only use the parts of speech tags from your training corpus.
+you actually only use the parts of speech tags from your training corpus.
+
+calculate tag pairs 
+
+transition probabilities 
+= count of (previous tag, current tag)/ count of combination with starting previous tag
+
+smoothing
+
+Emission matrix 
+
+hidden state to pos
+
+In contrast to the transition probabilities here, you would 
+want to count the co occurrences of a part of speech tag with a specific word.
+
+Now we have to take counts of word followed by parts of speech.
+
+
+The Viterbi Algorithm:
+
+A graph algorithm 
+
+steps -
+select max(Transistion_probability*emission_probability) from one state to other state
+
+final step -
+
+multiply all the above probabilities
+
+The Viterbi algorithm actually computes several such paths at the same time 
+in order to find the most likely sequence of hidden states. 
+It uses the matrix representation of the hidden Markov model. 
+
+The algorithm can be split into three main steps:
+ The initialization step, 
+ The forward pass, 
+ The backward pass.
+
+ Initialization :
+
+ 
